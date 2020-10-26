@@ -1,22 +1,28 @@
-var gulp = require('gulp'),
-  svgSprite = require('gulp-svg-sprite');
-
-config = {
+var gulp = require('gulp');
+var svgSprite = require('gulp-svg-sprite');
+// SVG Config
+var config = {
   mode: {
-    css: {
-      // Activate the «css» mode
-      render: {
-        css: true, // Activate CSS output (with default options)
-      },
+    symbol: {
+      // symbol mode to build the SVG
+      dest: 'sprite', // destination folder
+      sprite: 'sprite.svg', // sprite name
+      example: true, // Build sample page
     },
+  },
+  svg: {
+    xmlDeclaration: false, // strip out the XML attribute
+    doctypeDeclaration: false, // don't include the !DOCTYPE declaration
   },
 };
 
-gulp.task('svg', function () {
-  return gulp
-    .src('**/*.svg', { cwd: '/svgs' })
-    .pipe(svgSprite(config))
-    .pipe(gulp.dest('out'));
+gulp.task('sprite-page', function () {
+  return gulp.src('svg/**/*.svg').pipe(svgSprite(config)).pipe(gulp.dest('.'));
 });
 
-gulp.task('default', 'svg');
+gulp.task('sprite-shortcut', function () {
+  return gulp.src('sprite/sprite.svg').pipe(gulp.dest('.'));
+});
+
+// gulp.task('default', ['sprite-page', 'sprite-shortcut']);
+gulp.task('default', gulp.series('sprite-page', 'sprite-shortcut')); // update to gulp

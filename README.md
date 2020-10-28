@@ -43,4 +43,8 @@ The criteria asks for an h1 tag to replace the logo text in the svg. I have impl
 
 As we are using these svg tools to reduce file size and the number of http requests I used the sprite for the navigation. Only the background and logo use the original files. However, I have kept the file with all the svgs, each one reduced to --pretty.
 
-As a hack, I thought about styling the colour of the logo text to 'transparent' on mobile screens to enable us to again reference the sprite. I haven't to stick more closely to the task criteria.
+As a hack, I thought about styling the colour of the logo text to 'transparent' on mobile screens to enable us to again reference the sprite. I haven't so that the final output sticks more closely to the task criteria.
+
+### Browser testing
+
+This site was tested succesfully on a live server on Chrome v86, Safari 14.0 and Firefox 83.

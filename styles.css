@@ -6,6 +6,8 @@ body {
   font-weight: 300;
   color: #111;
   background: #edeff0;
+  /* ADDED STYLES */
+  background-image: url(svg/background.svg);
 }
 
 #container {
@@ -26,6 +28,8 @@ a {
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
+  /* ADDED STYLES */
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -38,7 +42,8 @@ header {
 
 header nav {
   padding-bottom: 50px;
-  text-align: left;
+  /* ADDED STYLES */
+  text-align: center;
 }
 
 header nav ul li {
@@ -59,4 +64,91 @@ footer {
   margin-top: 100px;
   padding-bottom: 30px;
   color: #ba8058;
+}
+
+/* NAVIGATION */
+.nav__link {
+  display: flex;
+}
+
+.nav__link svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* LOGO */
+.logo {
+  height: 120px;
+  width: 140px;
+}
+
+/* text in logo */
+.st1 {
+  display: none;
+}
+
+.logo__text {
+  text-transform: uppercase;
+}
+
+/* CORGIS */
+
+.corgi__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  list-style-type: none;
+}
+
+.corgi__container {
+  width: 150px;
+  text-align: left;
+  padding: 0 0.7rem;
+}
+
+.corgi {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
+.corgi__name {
+  margin-left: 37px;
+  color: #ba8058;
+}
+
+.body__sable {
+  color: #ba8058;
+}
+
+.body__fawn {
+  color: #f4c6a6;
+}
+
+.body__red {
+  color: #834b29;
+}
+
+.body__stone {
+  color: #52595f;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 425px) {
+  /* navigation */
+  header nav {
+    text-align: left;
+  }
+
+  /* text in logo */
+  .st1 {
+    display: inline;
+  }
+
+  .logo__text {
+    display: none;
+  }
 }

@@ -1,8 +1,20 @@
-# Treehouse SVG Project
+# Work with SVG Sprites
 
-In this project, you'll use SVGs to spruce up and add a bit of character to a website. You’ll be given a website mockup, some basic HTML and CSS, and matching SVG files. You'll need to use the SVG files provided to match the mockup as closely as possible.
+In this project, I used SVGs to spruce up and add a bit of character to a website. Given a website mockup, with some basic HTML and CSS, and matching SVG files. I used the SVG files provided to match the mockup as closely as possible.
 
-## Instructions
+## Screenshot
+
+<img width="300px" src="https://user-images.githubusercontent.com/19231569/214060073-4afe8c50-547a-4d5e-80d5-66ab040715ba.png" >
+
+## Contents
+
+[Client Instructions](#client-instructions)
+
+[Issues](#issues)
+
+[Design Notes](#design-notes)
+
+## Client Instructions
 
 1. Background
    - In styles.css, use the background.svg file to create a tiled background on the body of the site, as shown on the mockup.
